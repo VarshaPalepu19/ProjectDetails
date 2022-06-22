@@ -1,0 +1,19 @@
+<template>
+    <lightning-card  title="Project">
+        <div class="slds-p-horizontal_small">
+            <ul class="slds-has-dividers_bottom_space">
+            <template for:each={item} for:item="i" if:true={item}>
+                <li key={i.Id} class="slds-item">
+                    <lightning-tile label={i.Name}>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                            <li slot="footer">
+                                {i.Start_Date__c}
+                            </li>
+                        </ul>
+                    </lightning-tile>
+                    </li>
+            </template>
+            </ul>
+        </div>
+    </lightning-card>
+</template>
